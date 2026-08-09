@@ -1,0 +1,95 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[
+    top=1.6cm,
+    bottom=1.6cm,
+    left=1.8cm,
+    right=1.8cm
+]{geometry}
+
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\setmainfont{TeX Gyre Heros}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\definecolor{accent}{HTML}{303030}
+\definecolor{muted}{HTML}{666666}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent
+}
+
+\titleformat{\section}
+    {\large\bfseries\color{accent}}
+    {}
+    {0em}
+    {}
+    [\vspace{2pt}\titlerule]
+
+\titlespacing*{\section}{0pt}{1.2em}{0.6em}
+
+\newcommand{\cventry}[4]{%
+    \begin{tabularx}{\textwidth}{@{}Xr@{}}
+        \textbf{#1} & \textcolor{muted}{#3} \\
+        \textit{#2} & \textcolor{muted}{#4}
+    \end{tabularx}
+    \vspace{0.25em}
+}
+
+\newenvironment{cvitems}
+    {\begin{itemize}[
+        leftmargin=1.3em,
+        itemsep=0.2em,
+        topsep=0.2em,
+        parsep=0pt
+    ]}
+    {\end{itemize}}
+
+\begin{document}
+
+{\Huge\bfseries Björn Domars}
+
+\vspace{0.3em}
+
+{\large\color{muted} Senior Infrastructure Engineer}
+
+\vspace{0.6em}
+
+Turku, Finland
+\quad\textbullet\quad
+\href{mailto:bdomars@0xbd.fi}{bdomars@0xbd.fi}
+\quad\textbullet\quad
++358 40 861 5694
+\quad\textbullet\quad
+\href{https://github.com/bdomars}{github.com/bdomars}
+
+\section{Profile}
+\input{sections/profile}
+
+\section{Technical Expertise}
+\input{sections/skills}
+
+\section{Professional Experience}
+\input{sections/experience}
+
+\section{Education}
+\input{sections/education}
+
+\section{Board \& Association Experience}
+\input{sections/boardexp}
+
+\section{Interests}
+\input{sections/interests}
+
+\end{document}
