@@ -1,9 +1,11 @@
-CV=cv
-
 .PHONY: all clean distclean
 
-all:
-	latexmk -lualatex $(CV).tex
+
+infra:
+	latexmk -lualatex cv_infra.tex
+	
+sw:
+	latexmk -lualatex cv_sw.tex
 
 clean:
 	latexmk -c
