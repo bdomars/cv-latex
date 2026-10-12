@@ -1,9 +1,10 @@
-.PHONY: all clean distclean
+.PHONY: all infra sw clean distclean
 
+all: infra sw
 
 infra:
 	latexmk -lualatex cv_infra.tex
-	
+
 sw:
 	latexmk -lualatex cv_sw.tex
 

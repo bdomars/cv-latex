@@ -5,15 +5,32 @@
     {Turku, Finland}
 
 \begin{cvitems}
-    \item Developed and maintained software and internal tooling using
-          languages including Go and Python.
-    \item Worked across development and operations, from application code
-          and database design to deployment, monitoring and production
-          troubleshooting.
+    \item As one of three engineers in a flat team, planned and coordinated
+          the evolution of the production platform through three generations:
+          from LXD on bare-metal servers, to Kubernetes on a VMware vSphere
+          cluster, to Kubernetes running directly on bare metal.
+    \item Automated Kubernetes node provisioning on vSphere with Packer-built
+          VM images, Terraform and Rancher.
+    \item Migrated Kubernetes off vSphere onto bare-metal RKE2, with node
+          provisioning and host networking and storage managed by Ansible.
+          Evaluated container-focused operating systems such as CoreOS before
+          settling on a general-purpose Linux distribution.
+    \item Operated production clusters in the EU, US and APAC plus a
+          development cluster, managed through GitOps with Argo CD. CI/CD
+          pipelines in CircleCI and GitHub Actions built tagged releases and
+          deployed them automatically to development, with controlled
+          promotion to production.
+    \item Built cluster networking and ingress on Cilium and Traefik, after
+          evaluating alternatives including Istio, HAProxy and MetalLB.
     \item Managed PostgreSQL database infrastructure, evolving from Ansible-based
           automation to Kubernetes-native management with CloudNativePG.
-    \item Built monitoring and alerting using Prometheus and Grafana.
+    \item Set up IAM with authentik for internal tools and developers, and
+          Dex-based SSO for customers.
+    \item Built monitoring, alerting and log aggregation with Prometheus, Grafana and Loki.
     \item Diagnosed complex Linux, networking and storage incidents.
+    \item Developed internal tooling and backend services in Go and Python,
+          including a WireGuard-based VPN service, and containerized
+          applications for the move to Kubernetes.
 \end{cvitems}
 
 \vspace{0.5em}
@@ -27,21 +44,6 @@
 \begin{cvitems}
     \item Developed and maintained a full-stack web application.
     \item Developed internal tools and automation.
-    \item Designed and maintained Linux server infrastructure.
+    \item Designed and maintained Linux server infrastructure running LXD
+          on bare-metal servers.
 \end{cvitems}
-
-\vspace{0.5em}
-
-\cventry
-    {Jakobstad Network \& Telecom}
-    {Summer Trainee}
-    {2010}
-    {Jakobstad, Finland}
-
-\vspace{0.5em}
-
-\cventry
-    {The City of Jakobstad, Education Dept.}
-    {Summer Trainee, IT Department}
-    {2009}
-    {Jakobstad, Finland}
